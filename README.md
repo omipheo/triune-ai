@@ -1,4 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Triune AI – P6 Math Mastery Engine
+
+Mobile-first PWA (Next.js, Supabase, Living Glass “Command Bridge” UI).
+
+## Milestone 1: The Bridge
+
+- **Auth:** Login / Signup with Supabase; redirect to `/mission`.
+- **Command Bridge:** Top HUD (Triune logo + Fuel 12/30), Mission Map (mastery nodes), bottom nav (Mission, Vault, Support).
+- **Gold Nodes:** Locked / Active / Mastered states; tap active node to open Dr. Julian chat.
+- **Verbal Mastery:** Web Speech API mic button + text fallback in chat overlay.
+- **PWA:** `manifest.json`, Serwist service worker, “Add to Home Screen” (place 192×192 and 512×512 icons in `public/icons/`).
+
+## Setup
+
+1. Copy `.env.example` to `.env.local` and set:
+   - `NEXT_PUBLIC_SUPABASE_URL`
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+2. In Supabase SQL Editor, run `supabase/migrations/20250213000000_profiles_and_rls.sql`.
+3. Add PWA icons to `public/icons/`: `icon-192x192.png`, `icon-512x512.png` (from Triune Gold Triangle asset).
+
+## Build & run
+
+- **Dev:** `npm run dev`
+- **Build (PWA):** `npm run build` (uses `--webpack` for Serwist).
+- **Start:** `npm run start`
 
 ## Getting Started
 

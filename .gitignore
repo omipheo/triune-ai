@@ -30,8 +30,10 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env.local
+# env files (never commit secrets)
+.env
+.env.*
+!.env.example
 
 # Serwist
 public/sw*
@@ -46,3 +48,6 @@ public/swe-worker-*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# requirements
+requirements
